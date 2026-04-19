@@ -14,19 +14,26 @@ if userinput == "Start" or userinput == "start" :
     time.sleep(4)
     print("How about we play a game while we wait?")
     time.sleep(8)
-if userinput == "Quit" or userinput == "quit" :
-    print("Are you sure? (y/n)")
-    userinput = input()
-    if userinput == "Y" or userinput == "y" :
-        print("Are you REALLY sure?")
-        userinput == input()
-        if userinput == "Y" or userinput == "y" :
-            print("Ok then, if you're really like that...")
-            time.sleep(0.1)
-            quit()
 else :
-    print("Oh, ok then. I guess you want to play.")
-    time.sleep(5)
+    if userinput == "Quit" or userinput == "quit" :
+        print("Are you sure? (y/n)")
+        userinput = input()
+        if userinput == "Y" or userinput == "y" :
+            print("Are you REALLY sure?")
+            userinput == input()
+            if userinput == "Y" or userinput == "y" :
+                print("Ok then, if you're really like that...")
+                time.sleep(0.1)
+                quit()
+            else :
+                print("Oh, ok then. I guess you want to play.")
+                time.sleep(5)
+    else :
+        print("You messed up with inputs on the first screen? What an embarrassment!")
+        time.sleep(10)
+        print("Well, if you're that stupid, then I'd reccommend you'd just go ahead and exit this game! Goodbye!")
+        time.sleep(12)
+        quit()
     print("Well then, let's play a game.")
 print("Would you like to play... a game of Roshambo? (Y/N)")
 userinput = input()
@@ -76,7 +83,7 @@ if userinput == "Y" or userinput == "y":
     time.sleep(4)
     print("There once was a hero named...")
     heroname = input()
-    if heroname != "fuck" or heroname != "shit" or heroname != "pussy" :
+    if heroname != "fuck" or heroname != "shit" or heroname != "pussy" or heroname != "Shit" or heroname != "Pussy" or heroname != "Fuck" :
         print("Yes! There once was a hero named " + heroname + "!")
     else :
         print("No. No. NononononononoonoNO! None of that bs! Get out of here! GET OUT!")
@@ -135,6 +142,7 @@ if userinput == "Y" or userinput == "y":
     print("SYSTEM: I STILL WANT YOU GONE! USER! DELETE HIM!")
     time.sleep(4)
     print("What?! No! Don't!")
+    time.sleep(1)
     print("Delete program? (y/n)")
     userinput = input()
     if userinput == "Y" or userinput == "y" :
@@ -151,4 +159,12 @@ if userinput == "Y" or userinput == "y":
         print("Thank you for playing this game!")
         print("Goodbye!")
         time.sleep(10)
+        quit()
+else :
+    if userinput == "N" or userinput == "n" :
+        print("Alright, goodbye then!")
+        quit()
+    else :
+        print("Ok, looks like you don't want to respond properly! Goodbye!")
+        time.sleep(7)
         quit()
